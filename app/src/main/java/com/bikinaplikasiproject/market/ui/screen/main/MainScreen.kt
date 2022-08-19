@@ -1,4 +1,4 @@
-package com.iddevops.basecompose.ui.screen.main
+package com.bikinaplikasiproject.market.ui.screen.main
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.iddevops.basecompose">
+    package="com.bikinaplikasiproject.market">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <application
-        android:name=".Application"
+        android:name="com.bikinaplikasiproject.market.Application"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -17,7 +17,7 @@
         tools:targetApi="31">
 
         <activity
-            android:name="com.iddevops.basecompose.ui.activity.main.MainActivity"
+            android:name="com.bikinaplikasiproject.market.ui.activity.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,9 +27,6 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name="com.iddevops.modules.account.ui.activity.auth.AuthActivity"
-            android:exported="true" />
         <activity
             android:name="com.iddevops.modules.common.ui.activity.home.HomeActivity"
             android:exported="true" />

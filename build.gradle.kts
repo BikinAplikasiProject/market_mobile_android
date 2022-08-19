@@ -2,7 +2,7 @@
 buildscript {
     extra.apply {
         set("compileSdk", 32)
-        set("applicationId", "com.iddevops.basecompose")
+        set("applicationId", "com.bikinaplikasiproject.market")
         set("minSdk", 24)
         set("targetSdk", 32)
         set("versionCode", 1)

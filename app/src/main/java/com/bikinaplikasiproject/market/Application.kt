@@ -1,4 +1,4 @@
-package com.iddevops.basecompose
+package com.bikinaplikasiproject.market
 
 import com.iddevops.core.main.coreMainModule
 import com.iddevops.core.main.util.application.BaseApplication

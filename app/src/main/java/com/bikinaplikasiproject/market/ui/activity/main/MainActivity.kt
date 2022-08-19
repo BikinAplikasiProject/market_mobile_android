@@ -1,7 +1,7 @@
-package com.iddevops.basecompose.ui.activity.main
+package com.bikinaplikasiproject.market.ui.activity.main
 
 import androidx.compose.runtime.Composable
-import com.iddevops.basecompose.ui.screen.main.MainScreen
+import com.bikinaplikasiproject.market.ui.screen.main.MainScreen
 import com.iddevops.control.module.navigator.common.HomeSpace
 import com.iddevops.control.module.navigator.uikit.UIKitSpace
 import com.iddevops.core.main.util.activity.BaseActivity
