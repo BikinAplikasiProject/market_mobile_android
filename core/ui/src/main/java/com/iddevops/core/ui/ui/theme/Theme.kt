@@ -3,19 +3,23 @@ package com.iddevops.core.ui.ui.theme
 import android.app.Activity
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.ViewCompat
+import com.iddevops.core.ui.ui.theme.color.NeutralBlack
 import com.iddevops.core.ui.ui.theme.color.NeutralWhite
 import com.iddevops.core.ui.ui.theme.color.PrimaryGreen
+import com.iddevops.core.ui.ui.theme.color.PrimaryYellow
 
 private val LightColorScheme = lightColorScheme(
     primary = PrimaryGreen,
     background = NeutralWhite,
-    surface = NeutralWhite
+    surface = NeutralWhite,
+    onBackground = NeutralBlack
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
@@ -33,7 +37,12 @@ private val LightColorScheme = lightColorScheme(
 //    background = NeutralWhite,
 //)
 
-private val DarkColorScheme = LightColorScheme
+private val DarkColorScheme = darkColorScheme(
+    primary = PrimaryYellow,
+    background = NeutralBlack,
+    surface = NeutralBlack,
+    onBackground = NeutralWhite
+)
 
 @Composable
 fun BaseComposeTheme(

@@ -24,7 +24,6 @@ import com.iddevops.core.ui.ui.theme.*
 import com.iddevops.core.ui.ui.theme.color.Gray400
 import com.iddevops.core.ui.ui.theme.color.NeutralWhite
 import com.iddevops.core.ui.util.ButtonState
-import com.iddevops.core.ui.util.ContentThemeWrapper
 import com.iddevops.core.ui.util.stadiumButtonBorderColor
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalComposeUiApi::class)

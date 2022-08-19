@@ -32,6 +32,7 @@ buildscript {
         set("gsonVersion", "2.9.0")
         set("chuckerVersion", "3.5.2")
         set("arrowVersion", "1.0.1")
+        set("coilVersion", "2.2.0")
     }
 }
 

@@ -16,3 +16,7 @@ exception.
 
 Compose is so wondeful. Even though compose is so powerful in handling side effect, it is quite new
 and quite hard not to make the memory leaks.
+
+## Architecture
+
+https://miro.com/app/board/uXjVOK7eOX4=/?moveToWidget=3458764531908615387&cot=14

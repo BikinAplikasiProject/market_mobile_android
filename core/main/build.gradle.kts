@@ -51,6 +51,7 @@ dependencies {
     api("com.google.accompanist:accompanist-pager:$accompanistVersion")
     api("com.google.accompanist:accompanist-pager-indicators:$accompanistVersion")
     api("com.google.accompanist:accompanist-navigation-animation:$accompanistVersion")
+    api("com.google.accompanist:accompanist-systemuicontroller:$accompanistVersion")
 
     // Compose preview is buggy need pooling container
     val customViewVersion = rootProject.extra["customViewVersion"]
@@ -95,4 +96,8 @@ dependencies {
     val chuckerVersion = rootProject.extra["chuckerVersion"]
     debugApi("com.github.chuckerteam.chucker:library:$chuckerVersion")
     releaseApi("com.github.chuckerteam.chucker:library-no-op:$chuckerVersion")
+
+    // IMAGE LOADER
+    val coilVersion = rootProject.extra["coilVersion"]
+    api("io.coil-kt:coil-compose:$coilVersion")
 }

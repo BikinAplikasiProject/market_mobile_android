@@ -47,12 +47,7 @@ android {
         }
     }
 }
-
 dependencies {
-    api(project(":core:main"))
-    api(project(":core:ui"))
-    api(project(":core:network"))
-    api(project(":control:module"))
-    api(project(":modules:uikit"))
-    api(project(":modules:common"))
+    api(project(":control:igniter"))
 }
+

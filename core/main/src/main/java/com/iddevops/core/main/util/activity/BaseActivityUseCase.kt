@@ -6,5 +6,5 @@ import kotlinx.coroutines.Job
 
 interface BaseActivityUseCase : BaseComponentUseCase, BootstrapUseCase {
     fun withScope(block: suspend () -> Unit): Job
-    fun onPreCreate()
+    fun onEarlyCreate()
 }

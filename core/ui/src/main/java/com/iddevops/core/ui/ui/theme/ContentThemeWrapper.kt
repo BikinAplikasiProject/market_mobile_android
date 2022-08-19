@@ -1,13 +1,17 @@
-package com.iddevops.core.ui.util
+package com.iddevops.core.ui.ui.theme
 
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.iddevops.core.ui.ui.theme.BaseComposeTheme
 
 @Composable
-fun ContentThemeWrapper(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
+fun ContentThemeWrapper(
+    modifier: Modifier = Modifier,
+    forceDark: Boolean = isSystemInDarkTheme(),
+    content: @Composable () -> Unit
+) {
     BaseComposeTheme {
         // A surface container using the 'background' color from the theme
         Surface(

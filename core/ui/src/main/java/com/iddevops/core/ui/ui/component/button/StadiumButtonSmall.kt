@@ -22,7 +22,6 @@ import com.iddevops.core.ui.ui.theme.*
 import com.iddevops.core.ui.ui.theme.color.Gray500
 import com.iddevops.core.ui.ui.theme.color.NeutralWhite
 import com.iddevops.core.ui.util.ButtonState
-import com.iddevops.core.ui.util.ContentThemeWrapper
 import com.iddevops.core.ui.util.stadiumButtonBackground
 
 @OptIn(ExperimentalComposeUiApi::class)

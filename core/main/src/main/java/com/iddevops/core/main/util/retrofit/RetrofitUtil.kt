@@ -29,7 +29,7 @@ fun <I> createRetrofitService(
     .create(service)
 
 // FIXME: use this to map the response to Either<Error, T> since the EitherCallAdapterFactory is not yet ready
-fun <T> responseOf(block: () -> T): Either<Error, T> = try {
+fun <T> responseToEither(block: () -> T): Either<Error, T> = try {
     Either.Right(block.invoke())
 } catch (e: Throwable) {
     Either.Left(

@@ -1,5 +1,7 @@
 package com.iddevops.core.main.util.handler
 
+
 interface BackPressHandler {
-    fun onBackPress(): Boolean
+    fun onBackPress()
+    fun isActive(): Boolean
 }

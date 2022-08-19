@@ -8,3 +8,5 @@ object Secured {
 
     external fun getBaseUrl(): String
 }
+
+const val BASE_URL = "BASE URL"

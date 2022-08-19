@@ -1,5 +1,6 @@
 package com.iddevops.core.main.util.launcher
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import androidx.activity.result.contract.ActivityResultContract
@@ -8,7 +9,7 @@ import com.iddevops.core.main.util.gson.JsonConvertAble
 import com.iddevops.core.main.util.gson.toObject
 
 abstract class BaseLauncher<P : JsonConvertAble, O>
-    : ActivityResultContract<P, O>() {
+    : ActivityResultContract<P, O?>() {
 
     abstract val intent: (c: Context) -> Intent
     abstract val outputType: Class<O>
@@ -20,11 +21,13 @@ abstract class BaseLauncher<P : JsonConvertAble, O>
         }
     }
 
-    override fun parseResult(resultCode: Int, intent: Intent?): O {
-        return intent?.getStringExtra(ActivityResultEmitter.KEY.RESULT.name)?.toObject(outputType)
+    override fun parseResult(resultCode: Int, intent: Intent?): O? {
+        return if (resultCode == Activity.RESULT_OK) intent?.getStringExtra(ActivityResultEmitter.KEY.RESULT.name)
+            ?.toObject(outputType)
             ?: run {
-                // TODO: firebase crashlytic here
+                // TODO: firebase crash analytic here
                 throw NullPointerException()
             }
+        else null
     }
 }

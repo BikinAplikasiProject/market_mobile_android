@@ -65,6 +65,6 @@ subprojects {
 
 dependencies {
     constraints {
-        api(project(":control:module"))
+        api(project(":control:provider"))
     }
 }

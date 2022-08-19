@@ -4,40 +4,34 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.unit.dp
 import androidx.lifecycle.lifecycleScope
-import com.iddevops.core.main.util.handler.BackPressHandler
+import com.iddevops.core.main.util.handler.BackPressHandlerProvider
+import com.iddevops.core.main.util.setupScreenSize
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
 abstract class BaseActivity : ComponentActivity(), BaseActivityUseCase {
 
-    object BackPressHandlerProvider {
-        private val handlers = arrayListOf<BackPressHandler>()
-
-        fun onBackPress(): Boolean {
-            return try {
-                handlers.last().onBackPress()
-            } catch (e: Throwable) {
-                false
-            }
-        }
-
-        fun addHandler(handler: BackPressHandler) {
-            handlers.add(handler)
-        }
-
-        fun removeHandler(handler: BackPressHandler) {
-            handlers.remove(handler)
-        }
-    }
-
     override val TAG = this.javaClass.simpleName
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        onPreCreate()
-
         super.onCreate(savedInstanceState)
-        setContent(content = content)
+        onEarlyCreate()
+
+        setContent {
+            val configuration = remember {
+                LocalConfiguration
+            }
+            setupScreenSize(
+                configuration.current.screenWidthDp.dp,
+                configuration.current.screenHeightDp.dp,
+                false
+            )
+            content()
+        }
 
         initData()
         initUI()
@@ -45,7 +39,7 @@ abstract class BaseActivity : ComponentActivity(), BaseActivityUseCase {
         initAction()
     }
 
-    override fun onPreCreate() {}
+    override fun onEarlyCreate() {}
 
     override fun initData() {}
 
@@ -63,9 +57,8 @@ abstract class BaseActivity : ComponentActivity(), BaseActivityUseCase {
 
     abstract val content: @Composable () -> Unit
 
-    override fun onBackPressed() {
-        if (BackPressHandlerProvider.onBackPress().not()) {
-            moveTaskToBack(true)
-        }
+    final override fun onBackPressed() {
+        BackPressHandlerProvider.getActiveHandler()?.onBackPress()
+            ?: super.onBackPressed()
     }
 }

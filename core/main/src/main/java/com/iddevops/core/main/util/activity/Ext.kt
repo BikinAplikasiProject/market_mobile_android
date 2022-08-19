@@ -6,7 +6,7 @@ import com.iddevops.core.main.util.navigation.BaseSpace
 
 fun <P, O> BaseActivity.createLauncher(
     space: BaseSpace<P, O>,
-    callback: ActivityResultCallback<O>
+    callback: ActivityResultCallback<O?>
 ): ActivityResultLauncher<P> {
     return registerForActivityResult(space.getLauncher(), callback)
 }

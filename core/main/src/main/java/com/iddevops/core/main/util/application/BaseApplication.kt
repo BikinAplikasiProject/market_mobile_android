@@ -10,7 +10,7 @@ import org.koin.core.logger.Level
 import org.koin.core.module.Module
 
 abstract class BaseApplication : Application() {
-    abstract val modules: ArrayList<Module>
+    abstract val modules: List<Module>
 
     companion object {
         @SuppressLint("StaticFieldLeak")
