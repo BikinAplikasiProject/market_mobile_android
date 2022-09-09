@@ -92,6 +92,7 @@ fun OutlinedStadiumButton(
                         color = stadiumButtonBorderColor(false, ButtonState.NORMAL),
                         strokeWidth = dp2
                     )
+
                     else -> TextButton(
                         text = label,
                         color = when (state) {

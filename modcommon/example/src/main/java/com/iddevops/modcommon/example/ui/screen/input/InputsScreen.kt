@@ -46,9 +46,11 @@ fun InputsScreen(modifier: Modifier = Modifier) {
                 it.contains("error") -> {
                     error.value = it
                 }
+
                 it.contains("helper") -> {
                     helper.value = it
                 }
+
                 else -> {
                     if (error.value.isNotBlank())
                         error.value = ""
@@ -72,9 +74,11 @@ fun InputsScreen(modifier: Modifier = Modifier) {
                 it.contains("error") -> {
                     error.value = it
                 }
+
                 it.contains("helper") -> {
                     helper.value = it
                 }
+
                 else -> {
                     if (error.value.isNotBlank())
                         error.value = ""

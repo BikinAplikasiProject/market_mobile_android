@@ -31,6 +31,7 @@ dependencies {
     api("io.arrow-kt:arrow-core-retrofit:$arrowVersion")
 
     testApi("junit:junit:4.13.2")
+    testApi("org.testng:testng:7.6.1")
     androidTestApi("androidx.test.ext:junit:1.1.3")
     androidTestApi("androidx.test.espresso:espresso-core:3.4.0")
 
@@ -100,4 +101,23 @@ dependencies {
     // IMAGE LOADER
     val coilVersion = rootProject.extra["coilVersion"]
     api("io.coil-kt:coil-compose:$coilVersion")
+
+    // BLACK CODE
+    api("androidx.core:core-ktx:1.9.0")
+    api("androidx.appcompat:appcompat:1.5.1")
+    api("com.google.android.material:material:1.6.1")
+    api("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
+    api("androidx.activity:activity-compose:1.5.1")
+
+    // Activity Compose
+    api("androidx.activity:activity-compose:1.5.1")
+
+    // CameraX
+    api("androidx.camera:camera-camera2:1.1.0")
+    api("androidx.camera:camera-lifecycle:1.1.0")
+    api("androidx.camera:camera-view:1.2.0-beta01")
+
+    // Zxing
+    api("com.google.zxing:core:3.3.3")
+
 }

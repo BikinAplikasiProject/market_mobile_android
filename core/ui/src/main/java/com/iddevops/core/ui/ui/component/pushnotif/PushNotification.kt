@@ -43,6 +43,7 @@ fun PushNotification(
                         isClicked.value = false
                         onClick.invoke()
                     }
+
                     MotionEvent.ACTION_DOWN -> {
                         isClicked.value = true
                     }

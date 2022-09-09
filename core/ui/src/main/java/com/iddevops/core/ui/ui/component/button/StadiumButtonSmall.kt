@@ -87,6 +87,7 @@ fun StadiumButtonSmall(
                     color = NeutralWhite,
                     strokeWidth = dp2
                 )
+
                 else -> TextButton(
                     text = label,
                     color = when (state) {

@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     extra.apply {
-        set("compileSdk", 32)
+        set("compileSdk", 33)
         set("applicationId", "com.bikinaplikasiproject.market")
         set("minSdk", 24)
         set("targetSdk", 32)

@@ -53,12 +53,15 @@ private fun ColumnScope.Content() {
             is Default -> {
                 TextContent(content = "Iddle")
             }
+
             is Failed -> {
                 TextContent(content = "Failed: ${state.e.message}")
             }
+
             is Loading -> {
                 ProgressBlocker()
             }
+
             is Success -> {
                 ListContent(list = state.value)
             }

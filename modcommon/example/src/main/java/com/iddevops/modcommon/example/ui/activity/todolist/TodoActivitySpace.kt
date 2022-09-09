@@ -1,6 +1,5 @@
 package com.iddevops.modcommon.example.ui.activity.todolist
 
-import android.content.Intent
 import androidx.activity.result.contract.ActivityResultContract
 import com.iddevops.control.provider.example.TodoSpace
 import com.iddevops.core.main.domain.model.NOTHING
