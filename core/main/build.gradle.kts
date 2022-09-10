@@ -120,4 +120,8 @@ dependencies {
     // Zxing
     api("com.google.zxing:core:3.3.3")
 
+    // Maps
+    api("com.google.maps.android:maps-compose:2.7.0")
+    api("com.google.android.gms:play-services-maps:18.1.0")
+
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.modwebadmin.dashboard">
+
+    <application>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBo_rWXqXu70ZRNhwNg-P4pd2Qxhqfm0Jg" />
+    </application>
+</manifest>

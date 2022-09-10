@@ -10,4 +10,6 @@ dependencies {
     api(project(":modbuyer:dashboard"))
 
     api(project(":modseller:dashboard"))
+
+    api(project(":modwebadmin:dashboard"))
 }

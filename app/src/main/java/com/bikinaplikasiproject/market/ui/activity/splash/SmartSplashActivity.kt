@@ -8,8 +8,10 @@ import com.iddevops.control.provider.buyer.HomeSpace
 import com.iddevops.control.provider.buyer.StoreSpace
 import com.iddevops.control.provider.example.TodoSpace
 import com.iddevops.control.provider.example.UIKitSpace
+import com.iddevops.control.provider.web.WebHomeSpace
 import com.iddevops.core.main.util.activity.BaseActivity
 import com.iddevops.core.main.util.activity.createLauncher
+import com.iddevops.core.main.util.coroutine.LaunchInIO
 import com.iddevops.core.main.util.logDebug
 import org.koin.android.ext.android.inject
 
@@ -20,6 +22,7 @@ class SmartSplashActivity : BaseActivity() {
     private val todoSpace: TodoSpace by inject()
     private val homeSpace: HomeSpace by inject()
     private val storeSpace: StoreSpace by inject()
+    private val webHomeSpace: WebHomeSpace by inject()
 
     private val uiKitLauncher = createLauncher(uiKitSpace) {
         logDebug("pouipuyouyqwouyowq UI KIT $it")
@@ -33,6 +36,9 @@ class SmartSplashActivity : BaseActivity() {
     private val storeLauncher = createLauncher(storeSpace) {
         logDebug("pouipuyouyqwouyowq STORE $it")
     }
+    private val webHomeLauncher = createLauncher(webHomeSpace) {
+        logDebug("pouipuyouyqwouyowq WEB HOME $it")
+    }
 
     override val content = @Composable {
         SmartScreen(
@@ -42,11 +48,11 @@ class SmartSplashActivity : BaseActivity() {
     }
 
     override fun initAction() {
-//        LaunchInIO {
-//            storeLauncher.launch(
-//                StoreSpace.Payload()
-//            )
-//        }
+        LaunchInIO {
+            webHomeLauncher.launch(
+                WebHomeSpace.Payload()
+            )
+        }
     }
 }
 
